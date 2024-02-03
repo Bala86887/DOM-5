@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>record</title>
+  </head>
+<body>
+<h1>Masai Employee Records</h1>
+<form>
+<lable>Employee Name</lable><br>
+<input placeholder="Enter Student Name" id="name"><br>
+<lable>Employee ID</lable><br>
+<input placeholder="Enter Employee ID" id="bala"><br>
+<lable>Department</lable><br>
+<select id="department">
+<option>SelectDepartment</option>
+<option>Frontend</option>
+<option>Backend</option>
+<options>operations</options>
+<option>hr</option>
+<option>IA</option>
+</select><br>
+<lable>Experience</lable><br>
+<input placeholder="Experience In Years" id="experience"><br>
+<lable>Email Address</lable><br>
+<input placeholder="Enter Email Address" id="email"><br>
+<lable>Mobile Number</lable><br>
+<input placeholder="Enter Mobile Number" id="mobile"></input><br>
+<input type="submit">
+</form>
+<table border="color:red">
+<thead>
+<tr>
+<td>Name</td>
+<td>Employee ID</td>
+
+<td> Department</td>
+<td> Experience in years</td>
+<td> Email Address</td>
+<td> Mobile Number</td>
+
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody>
+
+</table>
+
+
+</body>
+<script>
+let one=document.querySelector("form")
+let two=document.getElementById("name")
+let three=document.getElementById("bala")
+let four=document.getElementById("department")
+let five=document.getElementById("experience")
+let six=document.getElementById("email")
+let seven=document.getElementById("mobile")
+let eight=document.querySelector("tbody")
+
+
+one.addEventListener("submit",function(a){
+a.preventDefault()
+let b=document.createElement("tr")
+let g=document.createElement("td")
+let o=document.createElement("td")
+let t=document.createElement("td")
+let i=document.createElement("td")
+let p=document.createElement("td")
+let s=document.createElement("td")
+g.innerText=two.value
+o.innerText=three.value
+t.innerText=four.value
+i.innerText=five.value
+p.innerText=six.value
+s.innerText=seven.value
+
+b.append(g,o,t,i,p,s)
+eight.append(b)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

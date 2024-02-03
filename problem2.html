@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Records</title> 
+</head>
+<body>
+   <h1>Hospital-Doctor Records</h1> 
+<form>
+<lable>Doctor Name</lable><br>
+<input placeholder="Enter Doctor Name" id="name"><br>
+<lable>Doctor ID</lable><br>
+<input placeholder="Enter Doctor Id" id="number"><br>
+<lable>Specialization</lable><br>
+<select id="option">
+<option>Select Specialization</option>
+<option>Dermatologist</option>
+<option>ENY</option>
+<option>Dentist</option>
+<option>covid</option>
+<option>Gynoecologist</option>
+</select><br>
+<lable>Experience</lable><br>
+<input placeholder="Experience in Years" id="year"><br>
+<lable>Email Adress</lable><br>
+<input placeholder="Enter Email Adress" id="mail"><br>
+<lable>Mobile Number</lable><br>
+<input placeholder="Enter Mobile Number" id="mobile"><br>
+<input type="submit">
+</form>
+<table border="black">
+<thead>
+<tr>
+<td>Name</td>
+<td>Doctor Id</td>
+<td>Specialization</td>
+<td>Experience in Years</td>
+<td>Email Address</td>
+<td>Mobile Number</td>
+<td>Role</td>
+<td >Delete</td>
+
+
+</tr>
+
+
+
+
+</thead>
+<tbody>
+
+
+</tbody>
+</table>
+<button id="del">DELETE</button>
+</body>
+<script>
+let t=document.querySelector("tbody")
+let f=document.querySelector("form")
+let n=document.getElementById("name")
+let i=document.getElementById("number")
+let y=document.getElementById("year")
+let s=document.getElementById("option")
+let e=document.getElementById("mail")
+let de=document.getElementById("del")
+let m=document.getElementById("mobile")
+
+f.addEventListener("submit",function(one){
+one.preventDefault()
+let obj={
+
+
+
+
+
+}
+obj.first=n.value
+obj.second=i.value
+obj.third=s.value
+obj.four=y.value
+obj.five=e.value
+obj.six=m.value
+let row=document.createElement("tr")
+let cone=document.createElement("td")
+let ctwo=document.createElement("td")
+let cthree=document.createElement("td")
+let cfour=document.createElement("td")
+let cfive=document.createElement("td")
+let csix=document.createElement("td")
+let cseven=document.createElement("td")
+let ceight=document.createElement("td")
+
+cone.innerText=obj.first
+ctwo.innerText=obj.second
+cthree.innerText=obj.third
+cfour.innerText=obj.four
+cfive.innerText=obj.five
+csix.innerText=obj.six
+
+row.append(cone,ctwo,cthree,cfour,cfive,csix,cseven,ceight)
+t.append(row)
+de.addEventListener("click",function(){
+
+cone.innerText=null
+ctwo.innerText=null
+cthree.innerText=null
+
+cfour.innerText=null
+cfive.innerText=null
+csix.innerText=null
+})
+
+}
+)
+
+
+</script>
+</html>
